@@ -40,3 +40,26 @@ import {CaloriePipe} from './calorie.pipe';
   </div>
   `
 })
+
+export class MealListComponent {
+  public mealList: Meal[];
+  public onMealSelect: EventEmitter<Meal>;
+  public selectedMeal: Meal;
+  public filterDone: string ="all";
+
+  constructor() {
+    this.onMealSelect = new EventEmitter();
+  }
+  mealClicked(clickedMeal: Meal): void {
+    this.selectedMeal = clickedMeal;
+    this.onMealSelect.emit(clickedMeal);
+  }
+  createMeal([name, details, calories]): void {
+    this.mealList.push(
+      new Meal(name, details, calories)
+    );
+  }
+  onChange(filterOption) {
+    this.filterDone = filterOption;
+  }
+}
