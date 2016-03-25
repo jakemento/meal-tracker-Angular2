@@ -17,7 +17,7 @@ import {CaloriePipe} from './calorie.pipe';
     <label class="whiteText"> sort by Calories </label>
     <div class ="biggerFont">
       <select (change)="onChange($event.target.value)">
-        <option value="lessthan300">Less than 300 Calories</option>
+        <option value="lessThan300">Less than 300 Calories</option>
         <option value="moreThan300">More Than 300 Calories</option>
         <option value="all" selected="selected">Show All</option>
       </select>
