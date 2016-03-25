@@ -13,7 +13,7 @@ import {CaloriePipe} from './calorie.pipe';
   directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
   template: `
 
-  <div class="keglister">
+  <div class="meallister">
     <label class="whiteText"> sort by Calories </label>
     <div class ="biggerFont">
       <select (change)="onChange($event.target.value)">
