@@ -6,12 +6,12 @@ import {Meal} from './meal.model';
   selector: 'my-app',
   directives: [MealListComponent],
   template: `
-  <div class="container"> <center>
+  <div class="container">
     <h1 >Meal Tracker </h1>
     <meal-list
       [mealList]="meals"
       (onMealSelect)="mealWasSelected($event)">
-    </meal-list> </center>
+    </meal-list>
   </div>
   `
 })
@@ -22,9 +22,7 @@ export class AppComponent {
     this.meals = [
       new Meal("Fish Tacos", "Tacos with salsa, sour cream and cilantro", 330),
       new Meal("Steak", "Ribeye with mashed potatoes and green beans", 550),
-      new Meal("Green Curry", "Spicy Green Curry with eggplant and chicken", 480),
-
-
+      new Meal("Green Curry", "Spicy Green Curry with eggplant and chicken", 480)
     ];
   }
   mealWasSelected(clickedMeal: Meal): void {
